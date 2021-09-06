@@ -29,13 +29,3 @@ The acceptance criteria for the task are simple - we are about to create a user-
 
 - use `api.js/saveUser({name: string, surname: string; role: string; email: string})` to save the form.
 - upon success the API returns the saved values
-
-## What we are looking for
-
-- software engineering craftmanship
-- an eye for software architecture
-- correctness of the submitted code
-- proper separation of concerns
-- simple solutions
-
-Please upload your modified version of this code to CodeSubmit.
