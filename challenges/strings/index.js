@@ -1,3 +1,4 @@
+//===============================================
 // Longest Substring Without Repeating Characters
 
 function lengthOfLongestSubstring(s) {
@@ -37,7 +38,7 @@ function lengthOfLongestSubstring(s) {
     return longestSubstring
 };
 
-
+//===============================================
 // Find longest palindrome in a string
 
 function longestPalindrome(s) {
@@ -81,3 +82,30 @@ const isPalindrome = (s) => {
     return isPalindrome(s.slice(1,-1))
     
 }
+
+//===============================================
+// Zigzag of a string
+
+function convert(s, numRows) {
+    
+    const arr = []
+    
+    if (numRows == 1) return s;
+    
+    // the cycle at which the new row starts
+    let cycle = numRows*2 -2
+    
+    for(let i = 0;i < numRows; i++){
+        for(let j = 0; j < s.length; j=j+cycle){
+            arr.push(s[i+j]);
+            
+            if(i!==0 && i!==numRows - 1){
+                arr.push(s[j+cycle-i])
+            }
+        }   
+    }
+        
+    return arr.join("")
+}
+    
+    
