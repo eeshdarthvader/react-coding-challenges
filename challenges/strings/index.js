@@ -107,5 +107,27 @@ function convert(s, numRows) {
         
     return arr.join("")
 }
+
+
+//===============================================
+// Palindrome of AlphaNumeric string (ignore cases)
+
+function isPalindrome(s) {
+    
+    const strArr = s.replace(/([^a-zA-Z0-9])/g,"")
+    
+    if(strArr.length < 2){
+        return true
+    }
+    
+    if( strArr[0].localeCompare(strArr[strArr.length - 1], undefined, {
+        sensitivity: 'base',
+      }) !== 0){
+        
+        return false   
+    }
+    
+    return isPalindrome(strArr.slice(1, -1))
+};
     
     
